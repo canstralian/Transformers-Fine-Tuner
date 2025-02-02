@@ -3,14 +3,18 @@ from model.model import fine_tune
 from data.preprocess import load_data, preprocess_data, save_processed_data
 
 def prepare_and_train(model_name, dataset_path, epochs, batch_size, learning_rate):
-    # Load and preprocess the dataset
-    data = load_data(dataset_path)
-    cleaned_data = preprocess_data(data)
-    processed_data_path = 'data/processed/processed_dataset.csv'
-    save_processed_data(cleaned_data, processed_data_path)
+    try:
+        # Load and preprocess the dataset
+        data = load_data(dataset_path)
+        cleaned_data = preprocess_data(data)
+        processed_data_path = 'data/processed/processed_dataset.csv'
+        save_processed_data(cleaned_data, processed_data_path)
 
-    # Proceed with model fine-tuning
-    return fine_tune(model_name, dataset_url=None, file=processed_data_path, epochs=epochs, batch_size=batch_size, learning_rate=learning_rate)
+        # Proceed with model fine-tuning
+        return fine_tune(model_name, dataset_url=None, file=processed_data_path, epochs=epochs, batch_size=batch_size, learning_rate=learning_rate)
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        return str(e)
 
 iface = gr.Interface(
     fn=prepare_and_train,
