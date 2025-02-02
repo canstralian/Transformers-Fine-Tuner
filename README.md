@@ -20,7 +20,7 @@ short_description: A Gradio interface
 
 # Transformers Fine Tuner
 
-🔥 **Transformers Fine Tuner** is a user-friendly Gradio interface that enables seamless fine-tuning of pre-trained transformer models on custom datasets. This tool facilitates efficient model adaptation for various NLP tasks, making it accessible for both beginners and experienced practitioners.
+🔥 **Transformers Fine Tuner** is a user-friendly Gradio interface that enables seamless fine-tuning of pre-trained transformer models on custom datasets. This tool facilitates efficient model a...
 
 ## Features
 
@@ -32,22 +32,28 @@ short_description: A Gradio interface
 ## Getting Started
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://huggingface.co/spaces/your-username/transformers-fine-tuner
-   cd transformers-fine-tuner
-   ```
+    ```bash
+    git clone https://github.com/canstralian/Transformers-Fine-Tuner.git
+    cd transformers-fine-tuner
+    ```
 
-2. **Install Dependencies**:
-   Ensure you have Python 3.10 or higher. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. **Set Up a Virtual Environment** (optional but recommended):
+    ```bash
+    python -m venv env
+    source env/bin/activate  # On Windows use `env\Scripts\activate`
+    ```
 
-3. **Run the Application**:
-   ```bash
-   python app.py
-   ```
-   Access the interface at `http://localhost:7860/`.
+3. **Install Dependencies**:
+    Ensure you have Python 3.10 or higher. Install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the Application**:
+    ```bash
+    python app.py
+    ```
+    Access the interface at `http://localhost:7860/`.
 
 ## Usage
 
