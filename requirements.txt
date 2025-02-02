@@ -1,7 +1,7 @@
-transformers
-torch
-datasets
-gradio
-accelerate
-bitsandbytes
-peft
+transformers==4.11.3
+torch==1.10.0
+datasets==1.14.0
+gradio==2.4.4
+accelerate==0.5.1
+bitsandbytes==0.26.0
+peft==0.1.0
