@@ -27,4 +27,49 @@ def fine_tune(model_name, dataset_url, file, epochs, batch_size, learning_rate):
         # Define training arguments
         training_args = TrainingArguments(
             output_dir="./results",
-            evaluation_strategy="epoch
+            evaluation_strategy="epoch",  # Evaluate at the end of each epoch
+            save_strategy="epoch",       # Save model at the end of each epoch
+            logging_strategy="epoch",    # Log metrics at the end of each epoch
+            learning_rate=learning_rate,
+            per_device_train_batch_size=batch_size,
+            per_device_eval_batch_size=batch_size,
+            num_train_epochs=epochs,
+            weight_decay=0.01,
+            push_to_hub=False,
+            report_to="all"  # Report to all available logging platforms
+        )
+
+        # Initialize Trainer
+        trainer = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=dataset["train"],
+            eval_dataset=dataset["test"],  # Ensure you have a test split
+            tokenizer=tokenizer,
+        )
+
+        # Start training
+        trainer.train()
+
+        return "Fine-tuning complete."
+
+    except Exception as e:
+        return f"An error occurred: {e}"
+
+# Gradio interface
+iface = gr.Interface(
+    fn=fine_tune,
+    inputs=[
+        gr.Textbox(label="Model Name", placeholder="e.g., bert-base-uncased"),
+        gr.Textbox(label="Dataset URL (optional)"),
+        gr.File(label="Upload Dataset (optional)"),
+        gr.Number(label="Epochs", value=3),
+        gr.Number(label="Batch Size", value=8),
+        gr.Number(label="Learning Rate", value=5e-5),
+    ],
+    outputs="text",
+    live=True,
+)
+
+if __name__ == "__main__":
+    iface.launch()
