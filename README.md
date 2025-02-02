@@ -20,7 +20,22 @@ short_description: A Gradio interface
 
 # Transformers Fine Tuner
 
-🔥 **Transformers Fine Tuner** is a user-friendly Gradio interface that enables seamless fine-tuning of pre-trained transformer models on custom datasets. This tool facilitates efficient model a...
+🔥 **Transformers Fine Tuner** is a user-friendly Gradio interface that enables seamless fine-tuning of pre-trained transformer models on custom datasets. This tool facilitates efficient model adaptation for specific tasks.
+
+![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue)
+![Last Commit](https://img.shields.io/github/last-commit/Canstralian/transformers-fine-tuner)
+![Issues](https://img.shields.io/github/issues/Canstralian/transformers-fine-tuner)
+![Pull Requests](https://img.shields.io/github/issues-pr/Canstralian/transformers-fine-tuner)
+![Contributors](https://img.shields.io/github/contributors/Canstralian/transformers-fine-tuner)
+
+## Table of Contents
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+4. [Contribution](#contribution)
+5. [License](#license)
+6. [Acknowledgments](#acknowledgments)
 
 ## Features
 
@@ -31,29 +46,29 @@ short_description: A Gradio interface
 
 ## Getting Started
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/canstralian/Transformers-Fine-Tuner.git
-    cd transformers-fine-tuner
-    ```
+### Clone the Repository
+```bash
+git clone https://github.com/canstralian/Transformers-Fine-Tuner.git
+cd transformers-fine-tuner
+```
 
-2. **Set Up a Virtual Environment** (optional but recommended):
-    ```bash
-    python -m venv env
-    source env/bin/activate  # On Windows use `env\Scripts\activate`
-    ```
+### Set Up a Virtual Environment (optional but recommended)
+```bash
+python -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+```
 
-3. **Install Dependencies**:
-    Ensure you have Python 3.10 or higher. Install the required packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
+### Install Dependencies
+Ensure you have Python 3.10 or higher. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
 
-4. **Run the Application**:
-    ```bash
-    python app.py
-    ```
-    Access the interface at `http://localhost:7860/`.
+### Run the Application
+```bash
+python app.py
+```
+Access the interface at `http://localhost:7860/`.
 
 ## Usage
 
@@ -66,6 +81,16 @@ short_description: A Gradio interface
 
 After configuring the parameters, click **Submit** to start the fine-tuning process. Monitor the training progress and performance metrics in real-time.
 
+## Contribution
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new Pull Request.
+
 ## License
 
 This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE) file for more details.
@@ -75,3 +100,4 @@ This project is licensed under the Apache-2.0 License. See the [LICENSE](LICENSE
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
 - [Gradio](https://gradio.app/)
 - [Datasets](https://huggingface.co/docs/datasets/)
+
