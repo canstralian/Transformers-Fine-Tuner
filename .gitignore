@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.log
+*.csv
+*.tsv
+*.json
+*.h5
+*.ckpt
+*.pt
+*.pth
